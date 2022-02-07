@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import classes from "./AddTodo.module.css";
 import Button from "../UI/Button";
 
-const AddTodo = ({ addHandler }) => {
+import { NotesContext } from "../store/todoStore";
+
+const AddTodo = () => {
   const [todo, setTodo] = useState({ title: "", task: "" });
+  const ctx = useContext(NotesContext);
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -13,6 +16,11 @@ const AddTodo = ({ addHandler }) => {
       [name]: value,
     }));
     console.log(todo);
+  };
+
+  const addHandler = (e) => {
+    e.preventDefault();
+    ctx.addTodoItem(todo);
   };
 
   return (
