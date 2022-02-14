@@ -1,10 +1,10 @@
 import React from "react";
-import something from "./Button.module.css";
+import classes from "./Button.module.css";
 
 const Button = ({ type, onClick, children }) => {
   return (
     <button
-      className={something.button}
+      className={classes.button}
       type={type || "button"}
       onClick={onClick}
     >
