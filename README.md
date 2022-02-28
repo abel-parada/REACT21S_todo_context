@@ -1,6 +1,6 @@
 # TODO app using REACT
 
-An app for learning how to use ContextAPI.
+An app for learning how to use ContextAPI. Updated!
 
 ## Technologies used
 
